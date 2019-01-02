@@ -1,0 +1,15 @@
+{
+  "name": "ga-vex-rankings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Nicholas Bowers",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "puppeteer": "^1.11.0"
+  }
+}
