@@ -49,7 +49,7 @@ class App extends Component {
 
   fetchQualification = async (team) => {
     try {
-      const response = await fetch('/stateQualified')
+      const response = await fetch('/api/qualified')
       if (response.ok) {
         const jsonResponse = await response.json()
         return jsonResponse.includes(team)
@@ -70,7 +70,7 @@ class App extends Component {
 
   componentDidMount () {
     const newState = { teams: {} }
-    fetch('/teams')
+    fetch('/api/teams')
       .then(response => response.json())
       .then(jsonResponse => jsonResponse.forEach((team) => {
         const url = `https://api.vexdb.io/v1/`
