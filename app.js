@@ -5,7 +5,7 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 const scrapeTeams = async () => {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
   const page = await browser.newPage()
   await page.goto('https://www.robotevents.com/robot-competitions/vex-robotics-competition/RE-VRC-18-5113.html')
 
