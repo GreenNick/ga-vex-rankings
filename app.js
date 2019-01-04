@@ -24,7 +24,7 @@ app.get('/api/qualified', (req, res) => {
   const stateTeams = new Promise((resolve, reject) => {
     scrapeTeams()
       .then(data => resolve(data))
-      .catch(err => reject('scraping failed'))
+      .catch(err => reject(`${err}, scraping failed`))
   })
 
   stateTeams
